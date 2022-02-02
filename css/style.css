@@ -17,11 +17,10 @@ body {
   line-height: 1.87;
   color: #ffffff;
   cursor: pointer;
+  width: 200px;
+  height: 50px;
   background: #2196f3;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  display: inline-block;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
@@ -44,23 +43,43 @@ body {
 }
 .main-front {
   display: flex;
-  flex-direction: column;
   background: #2f303a;
   height: 600px;
-  width: 1600px;
   align-items: center;
   margin: 0 auto;
   justify-content: center;
 }
 
-.container {
+.vertical {
+  flex-direction: column;
+  align-items: center;
+}
+.container:not(:first-child):not(:last-child) {
   width: 1200px;
-  padding: 0 0;
+  padding: 94px 0;
   margin: 0 auto;
+  display: flex;
+}
+.container:first-child {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+.container:last-child {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+.main {
+  width: 1200px;
+  padding: 0 0 94px 0;
+  margin: 0 auto;
+  display: flex;
 }
 
-.header .container {
+.header {
   display: flex;
+  align-items: baseline;
 }
 /* =======END COMPONENTS=== */
 /* HEADER */
@@ -76,11 +95,13 @@ body {
   padding-bottom: 25px;
   margin-right: 93px;
 }
+.active {
+  color: #2196f3;
+}
 span {
   color: var(--main-color);
 }
 .navigation-list-link {
-  color: var(--main-color);
   height: 16px;
 }
 .email,
@@ -114,6 +135,7 @@ span {
 }
 .navigation-list-item {
   padding-top: 14px;
+  color: var(--main-color);
 }
 
 .navigation-list {
@@ -190,7 +212,6 @@ h4:not(:last-child) {
   padding-top: 50px;
 }
 
-
 ul {
   list-style-type: none;
 }
@@ -202,7 +223,6 @@ ul {
 
 .our-team {
   background: #f5f4fa;
-  width: 1600px;
 }
 .team-person {
   background-color: #ffffff;
@@ -233,10 +253,14 @@ ul {
 }
 
 .separated-list {
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: space-between;
+}
+.what-we-do-img,
+.team-person,
+.lorem-items {
+  margin: 0;
+  padding: 0 15px;
 }
 
 .contact,
@@ -252,7 +276,6 @@ ul {
 
 footer {
   background: #2f303a;
-  width: 1600px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -295,8 +318,6 @@ footer {
   border-radius: 4px;
 }
 
-
-
 .portfolio-category:not(:last-child) {
   padding-right: 8px;
 }
@@ -310,12 +331,15 @@ footer {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-   justify-content:space-between;
+  justify-content: space-between;
 }
 
-.portfolio-item2{
-  margin-top:30px;
+.portfolio-item2 {
+  margin-top: 30px;
 }
-.decription-portfolio{
-  padding-left:24px;
+.decription-portfolio {
+  padding-left: 24px;
+}
+.topline {
+  border: 1px solid #ececec;
 }
