@@ -44,7 +44,7 @@ body {
 .main-front {
   display: flex;
   background: #2f303a;
-  height: 600px;
+  height: 100%;
   align-items: center;
   margin: 0 auto;
   justify-content: center;
@@ -58,7 +58,6 @@ body {
   width: 1200px;
   padding: 94px 0;
   margin: 0 auto;
-  display: flex;
 }
 .container:first-child {
   width: 1200px;
@@ -80,6 +79,7 @@ body {
 .header {
   display: flex;
   align-items: baseline;
+  border-bottom: #ECECEC;
 }
 /* =======END COMPONENTS=== */
 /* HEADER */
@@ -95,14 +95,13 @@ body {
   padding-bottom: 25px;
   margin-right: 93px;
 }
-.active {
-  color: #2196f3;
-}
+
 span {
   color: var(--main-color);
 }
 .navigation-list-link {
   height: 16px;
+  color: var(--main-color);
 }
 .email,
 .phone {
@@ -135,9 +134,10 @@ span {
 }
 .navigation-list-item {
   padding-top: 14px;
-  color: var(--main-color);
 }
-
+.active {
+  color: #2196f3;
+}
 .navigation-list {
   display: flex;
   list-style: none;
